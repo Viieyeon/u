@@ -40,19 +40,22 @@ function typeSelection() {
         button.addEventListener('click', () => {
             if (button.checked) {
                 if (button.id === "textural") {
-                    accountTexture.classList.remove("d-none");
-                    accountSmooth.classList.add("d-none");
-                    accountFrescoes.classList.add("d-none");
+                    accountTexture.classList.remove("d-opasity");
+
+                    accountSmooth.classList.add("d-opasity");
+                    accountFrescoes.classList.add("d-opasity");
                 }
                 if (button.id === "smooth") {
-                    accountSmooth.classList.remove("d-none");
-                    accountTexture.classList.add("d-none");
-                    accountFrescoes.classList.add("d-none");
+                    accountSmooth.classList.remove("d-opasity");
+
+                    accountTexture.classList.add("d-opasity");
+                    accountFrescoes.classList.add("d-opasity");
                 }
                 if (button.id === "frescoes") {
-                    accountFrescoes.classList.remove("d-none");
-                    accountSmooth.classList.add("d-none");
-                    accountTexture.classList.add("d-none");
+                    accountFrescoes.classList.remove("d-opasity");
+
+                    accountSmooth.classList.add("d-opasity");
+                    accountTexture.classList.add("d-opasity");
                 }
             }
         })
@@ -62,28 +65,6 @@ function typeSelection() {
 
 typeSelection();
 
-// let costMaterial;
-// let costAddOrder;
-// function materialSelect() {
-//     let materialButtons = document.querySelectorAll(".texture-item-input");
-//     let price;
-//     for(i = 0; i < materialButtons.length; i++){
-//         let button = materialButtons[i];
-//         let buttonParent = button.parentNode;
-//         button.addEventListener('click', () => {
-//             if (button.checked) {
-//                 let materialItemPrice = buttonParent.querySelector(".account_price");
-//                 n = materialItemPrice.innerHTML;
-//                 price = n;
-//             } 
-//         })
-//         return console.log(price) 
-//     }
-
-// }
-
-// materialSelect();
-// console.log(materialSelect())
 
 
 function addToOrder() {
@@ -102,6 +83,7 @@ function addToOrder() {
 }
 
 addToOrder();
+
 
 
 stepNext = () => {
@@ -133,7 +115,7 @@ accountSubmit = () => {
     let calculaterInfo = document.querySelector(".account_calculater-info");
     let calculaterRegist = document.querySelector(".account_calculator-registration");
     let registrationСompleted = document.querySelector(".calculator-registration-completed");
-    formSubmit.addEventListener('submit', (event) =>{
+    formSubmit.addEventListener('submit', (event) => {
         event.preventDefault();
         calculaterInfo.classList.add("d-none");
         calculaterRegist.classList.add("d-none");
@@ -142,3 +124,57 @@ accountSubmit = () => {
 }
 
 accountSubmit();
+
+
+//получение цены 
+transforNumber = (price) => {
+    price = price.replace(/[^0-9]/g, '');
+    price = Number(price);
+    return price;
+}
+
+let calculaterForm = document.querySelector(".account_calculator-form");
+
+getSize = () => {
+    let getWidth = document.querySelector("#accountWidth");
+    let getHeight = document.querySelector("#accountHeight");
+    let width = Number(getWidth.value) / 100;
+    let height = Number(getHeight.value) / 100;
+
+    let sizeResult = Math.ceil(width * height);
+    return sizeResult;
+}
+
+
+
+
+calculation = () => {
+    let itemCheck = calculaterForm.querySelectorAll('input[name=radio-item]:checked');
+    let addOrder = calculaterForm.querySelector('.add-order_container');
+    let result = document.querySelector(".order-result-price");
+    let priceResult = Number(result.dataset.result);
+    let size = getSize();
+    for (i = 0; i < itemCheck.length; i++) {
+        let item = itemCheck[i];
+        let itemPrice = Number(item.value);
+        priceResult = size * itemPrice;
+        priceResult = priceResult.toLocaleString();
+    }
+
+
+    
+    // getItemAdd();
+    
+
+
+    result.textContent = priceResult + "₽";
+
+}
+
+calculaterForm.addEventListener('change', () => {
+    calculation();
+})
+
+
+//вывод цены в итог
+

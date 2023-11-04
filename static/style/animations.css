@@ -19,7 +19,7 @@
 
 .display-two .button-file {
     transition: all 1s;
-    animation: up-button .7s ease-in-out forwards;
+    animation: up-button 1s ease-in-out forwards;
 }
 
 @keyframes up-button {
@@ -33,9 +33,9 @@
 }
 
 .display-two .display-text {
-    transition: all .5s;
+    transition: all 1s;
     text-align: center;
-    animation: up-text .7s ease-in-out forwards;
+    animation: up-text 1s ease-in-out forwards;
 }
 
 @keyframes up-text {
@@ -56,8 +56,8 @@
 }
 
 .display-two .display-img {
-    transition: all .5s;
-    animation: up-img .7s ease forwards;
+    transition: all 1s;
+    animation: up-img 1s ease forwards;
 }
 
 @keyframes up-img {
@@ -169,3 +169,8 @@
 }
 
 /*  */
+
+.d-none{
+    display: none;
+    transition: all 1s ease-in;
+}

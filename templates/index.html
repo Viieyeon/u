@@ -298,11 +298,11 @@
                   <div class="account_wh d-flex">
                     <div class="account_width">
                       <label for="accountWidth">Ширина, см</label>
-                      <input type="number" class="input-wh" value="100">
+                      <input type="number" class="input-wh" value="100" id="accountWidth">
                     </div>
                     <div class="account_width">
                       <label for="accountHeight">Высота, см</label>
-                      <input type="number" class="input-wh" value="100">
+                      <input type="number" class="input-wh" value="100" id="accountHeight">
                     </div>
                   </div>
                 </div>
@@ -328,7 +328,7 @@
                     <div class="account_display-texture">
                       <div class="account_radio_btn-item d-flex">
                         <div class="texture-item">
-                          <input id="display-textural1" type="radio" name="radio-item" value="textural1"
+                          <input id="display-textural1" type="radio" name="radio-item" value="215"
                             class="texture-item-input">
                           <label for="display-textural1" class="button-account-item d-flex">
                             <img src="/static/media/jpg/img-input.jpg" alt="">
@@ -338,14 +338,14 @@
                             </div>
                           </label>
                           <div class="label-container-two">
-                            <span>650 ₽/М2</span>
-                            <p class="account_price">215 ₽/М2</p>
+                            <span>650 ₽/М²</span>
+                            <p class="account_price">215 ₽/М²</p>
                           </div>
                         </div>
                       </div>
                       <div class="account_radio_btn-item d-flex">
                         <div class="texture-item">
-                          <input id="display-textural2" type="radio" name="radio-item" value="textural2"
+                          <input id="display-textural2" type="radio" name="radio-item" value="844"
                             class="texture-item-input">
                           <label for="display-textural2" class="button-account-item d-flex">
                             <img src="/static/media/jpg/img-input.jpg" alt="">
@@ -355,46 +355,61 @@
                             </div>
                           </label>
                           <div class="label-container-two">
-                            <span>650 ₽/М2</span>
-                            <p class="account_price">844 ₽/М2</p>
+                            <span>650 ₽/М²</span>
+                            <p class="account_price">844 ₽/М²</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="account_display-smooth d-none">
+                    <div class="account_display-smooth d-opasity">
                       <div class="account_radio_btn-item d-flex">
                         <div class="texture-item">
-                          <input id="display-textural3" type="radio" name="radio-item" value="textural3"
+                          <input id="display-textural3" type="radio" name="radio-item" value="223"
                             class="texture-item-input">
                           <label for="display-textural3" class="button-account-item d-flex">
                             <img src="/static/media/jpg/img-input.jpg" alt="">
                             <div class="label-container">
-                              <h4>Блюбэк</h4>
+                              <h4>Пыщлщл</h4>
                               <span>Цветопередача</span>
                             </div>
                           </label>
                           <div class="label-container-two">
-                            <span>650 ₽/М2</span>
-                            <p class="account_price">223 ₽/М2</p>
+                            <span>650 ₽/М²</span>
+                            <p class="account_price">223 ₽/М²</p>
+                          </div>
+                        </div>
+                        <div class="texture-item">
+                          <input id="display-textural3" type="radio" name="radio-item" value="223"
+                            class="texture-item-input">
+                          <label for="display-textural3" class="button-account-item d-flex">
+                            <img src="/static/media/jpg/img-input.jpg" alt="">
+                            <div class="label-container">
+                              <h4>Пыщлщл</h4>
+                              <span>Цветопередача</span>
+                            </div>
+                          </label>
+                          <div class="label-container-two">
+                            <span>650 ₽/М²</span>
+                            <p class="account_price">223 ₽/М²</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="account_display-frescoes d-none">
+                    <div class="account_display-frescoes d-opasity">
                       <div class="account_radio_btn-item d-flex">
                         <div class="texture-item">
-                          <input id="display-textural4" type="radio" name="radio-item" value="textural4"
+                          <input id="display-textural4" type="radio" name="radio-item" value="233"
                             class="texture-item-input">
                           <label for="display-textural4" class="button-account-item d-flex">
                             <img src="/static/media/jpg/img-input.jpg" alt="">
                             <div class="label-container">
-                              <h4>Блюбэк</h4>
+                              <h4>Вльлмь</h4>
                               <span>Цветопередача</span>
                             </div>
                           </label>
                           <div class="label-container-two">
-                            <span>650 ₽/М2</span>
-                            <p class="account_price">233 ₽/М2</p>
+                            <span>650 ₽/М²</span>
+                            <p class="account_price">233 ₽/М²</p>
                           </div>
                         </div>
                       </div>
@@ -404,32 +419,33 @@
                 <div class="account_item-three">
                   <h4 class="add-order_title">Добавить к заказу:</h4>
                   <div class="add-order_container">
-                    <div class="add-order_item">
-                      <input id="addItemOne" type="radio" name="addItemOne" value="addItemOne" class="custom-radio">
+                    <div class="add-order_item add-order_radio">
+                      <input id="addItemOne" type="radio" name="add-item-1" value="200"
+                        class="custom-radio add-order_input">
                       <label for="addItemOne" class="add-order_label">
                         <div class="label-container">
                           <h4>Латексная печать</h4>
-                          <span>200 ₽/М2</span>
+                          <span class="add-order_price">200 ₽/М²</span>
                         </div>
                       </label>
                     </div>
-                    <div class="add-order_item">
-                      <input id="addItemTwo" type="radio" name="addItemTwo" value="addItemTwo" class="custom-radio"
-                        checked>
+                    <div class="add-order_item add-order_radio">
+                      <input id="addItemTwo" type="radio" name="add-item-2" value="350"
+                        class="custom-radio add-order_input">
                       <label for="addItemTwo" class="add-order_label">
                         <div class="label-container">
                           <h4>Добавить клей</h4>
-                          <span>350 ₽</span>
+                          <span class="add-order_price">350 ₽</span>
                         </div>
                       </label>
                     </div>
-                    <div class="add-order_item">
-                      <input id="addItemThree" type="radio" name="addItemThree" value="addItemThree"
-                        class="custom-radio">
+                    <div class="add-order_item add-order_radio">
+                      <input id="addItemThree" type="radio" name="add-item-3" value="399"
+                        class="custom-radio add-order_input">
                       <label for="addItemThree" class="add-order_label">
                         <div class="label-container">
                           <h4>Покрыть лаком</h4>
-                          <span>399 ₽/М2</span>
+                          <span class="add-order_price">399 ₽/М²</span>
                         </div>
                       </label>
                     </div>
@@ -438,8 +454,8 @@
                 <div class="order-result">
                   <div class="order-result-info">
                     <h4 class="order-result_title">Текущая стоимость заказа</h4>
-                    <p class="order-result-price">
-                      515 ₽
+                    <p class="order-result-price" data-result="0">
+                      0₽
                     </p>
                     <span>Минимальная стоимость заказа 2000 руб.</span>
                   </div>
