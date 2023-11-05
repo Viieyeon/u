@@ -4,10 +4,10 @@ var swiper = new Swiper(".headerSwiper", {
     loop: true,
     effect: "fade",
     centeredSlides: true,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -19,29 +19,29 @@ var swiper = new Swiper(".headerSwiper", {
   });
 
 
-  var swiper = new Swiper(".bestSwiper", {
-    direction: "vertical",
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 30,
-    mousewheel: true,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
-    breakpoints: {
-      300: {
-        direction: "horizontal",
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        },
-      },
-      600: {
-        direction: "vertical",
-      }
-    }
-  });
+  // var swiper = new Swiper(".bestSwiper", {
+  //   direction: "vertical",
+  //   loop: true,
+  //   slidesPerView: 1,
+  //   spaceBetween: 30,
+  //   mousewheel: true,
+  //   autoplay: {
+  //     delay: 2000,
+  //     disableOnInteraction: false,
+  //   },
+  //   breakpoints: {
+  //     300: {
+  //       direction: "horizontal",
+  //       coverflowEffect: {
+  //         rotate: 50,
+  //         stretch: 0,
+  //         depth: 100,
+  //         modifier: 1,
+  //         slideShadows: true,
+  //       },
+  //     },
+  //     600: {
+  //       direction: "vertical",
+  //     }
+  //   }
+  // });

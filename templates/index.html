@@ -309,20 +309,21 @@
                 <div class="account_item-two">
                   <h4 class="account_title">Материалы для обоев:</h4>
                   <div class="account_texture">
-                    <div class="account_radio_btn">
+                    <div class="account_radio_btn btn-textural">
                       <input id="textural" type="radio" name="radioTex" value="textural" class="radio_account" checked>
                       <label for="textural" class="button-account">Текстурные</label>
                     </div>
 
-                    <div class="account_radio_btn">
+                    <div class="account_radio_btn btn-smooth">
                       <input id="smooth" type="radio" name="radioTex" value="smooth" class="radio_account">
                       <label for="smooth" class="button-account">Гладкие</label>
                     </div>
 
-                    <div class="account_radio_btn">
+                    <div class="account_radio_btn btn-frescoes">
                       <input id="frescoes" type="radio" name="radioTex" value="frescoes" class="radio_account">
                       <label for="frescoes" class="button-account">Фрески</label>
                     </div>
+                    <div class="line"></div>
                   </div>
                   <div class="account_display">
                     <div class="account_display-texture">
@@ -393,6 +394,36 @@
                             <p class="account_price">223 ₽/М²</p>
                           </div>
                         </div>
+                        <div class="texture-item">
+                          <input id="display-textural3" type="radio" name="radio-item" value="223"
+                            class="texture-item-input">
+                          <label for="display-textural3" class="button-account-item d-flex">
+                            <img src="/static/media/jpg/img-input.jpg" alt="">
+                            <div class="label-container">
+                              <h4>Пыщлщл</h4>
+                              <span>Цветопередача</span>
+                            </div>
+                          </label>
+                          <div class="label-container-two">
+                            <span>650 ₽/М²</span>
+                            <p class="account_price">223 ₽/М²</p>
+                          </div>
+                        </div>
+                        <div class="texture-item">
+                          <input id="display-textural3" type="radio" name="radio-item" value="223"
+                            class="texture-item-input">
+                          <label for="display-textural3" class="button-account-item d-flex">
+                            <img src="/static/media/jpg/img-input.jpg" alt="">
+                            <div class="label-container">
+                              <h4>Пыщлщл</h4>
+                              <span>Цветопередача</span>
+                            </div>
+                          </label>
+                          <div class="label-container-two">
+                            <span>650 ₽/М²</span>
+                            <p class="account_price">223 ₽/М²</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="account_display-frescoes d-opasity">
@@ -419,9 +450,9 @@
                 <div class="account_item-three">
                   <h4 class="add-order_title">Добавить к заказу:</h4>
                   <div class="add-order_container">
-                    <div class="add-order_item add-order_radio">
-                      <input id="addItemOne" type="radio" name="add-item-1" value="200"
-                        class="custom-radio add-order_input">
+                    <div class="add-order_item add-order_checkbox">
+                      <input id="addItemOne" type="checkbox" name="add-item-1" value="200"
+                        class="custom-checkbox add-order_input">
                       <label for="addItemOne" class="add-order_label">
                         <div class="label-container">
                           <h4>Латексная печать</h4>
@@ -429,9 +460,9 @@
                         </div>
                       </label>
                     </div>
-                    <div class="add-order_item add-order_radio">
-                      <input id="addItemTwo" type="radio" name="add-item-2" value="350"
-                        class="custom-radio add-order_input">
+                    <div class="add-order_item add-order_checkbox">
+                      <input id="addItemTwo" type="checkbox" name="add-item-2" value="350"
+                        class="custom-checkbox add-order_input">
                       <label for="addItemTwo" class="add-order_label">
                         <div class="label-container">
                           <h4>Добавить клей</h4>
@@ -439,9 +470,9 @@
                         </div>
                       </label>
                     </div>
-                    <div class="add-order_item add-order_radio">
-                      <input id="addItemThree" type="radio" name="add-item-3" value="399"
-                        class="custom-radio add-order_input">
+                    <div class="add-order_item add-order_checkbox">
+                      <input id="addItemThree" type="checkbox" name="add-item-3" value="399"
+                        class="custom-checkbox add-order_input">
                       <label for="addItemThree" class="add-order_label">
                         <div class="label-container">
                           <h4>Покрыть лаком</h4>
@@ -541,19 +572,21 @@
             </p>
           </div>
           <div class="best-works_slider col-lg-7">
-            <div class="swiper bestSwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="/static/media/jpg/best-slide-3.jpg" alt="1" class="slide-best_img">
-                </div>
-                <div class="swiper-slide">
-                  <img src="/static/media/jpg/best-slide-1.jpg" alt="2" class="slide-best_img">
-                </div>
-                <div class="swiper-slide">
-                  <img src="/static/media/jpg/best-slide-2.jpg" alt="3" class="slide-best_img">
+            <div class="bestSwiper">
+              <div class="slider-wrapper">
+                <div class="slider">
+                  <div class="slide one-slide">
+                    <img src="/static/media/jpg/best-slide-1.jpg" alt="">
+                  </div>
+                  <div class="slide">
+                    <img src="/static/media/jpg/best-slide-2.jpg" alt="">
+                  </div>
+                  <div class="slide third-slide">
+                    <img src="/static/media/jpg/best-slide-3.jpg" alt="">
+                  </div>
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
+              <!-- <div class="swiper-pagination"></div> -->
             </div>
           </div>
         </div>
@@ -625,7 +658,9 @@
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="/static/scripts/main.js"></script>
+  <script src="/static/scripts/animation.js"></script>
   <script src="/static/scripts/calculater.js"></script>
   <script src="/static/scripts/slider.js"></script>
 </body>

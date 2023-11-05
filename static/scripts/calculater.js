@@ -133,7 +133,24 @@ transforNumber = (price) => {
     return price;
 }
 
+
 let calculaterForm = document.querySelector(".account_calculator-form");
+let accountOrder = document.querySelector(".account_item-three");
+let addItem1 = document.querySelector('input[name="add-item-1"]');
+let addItem2 = document.querySelector('input[name="add-item-2"]');
+let addItem3 = document.querySelector('input[name="add-item-3"]');
+let result = document.querySelector(".order-result-price");
+
+let resultPrice = 0;
+
+
+function updateTotalPrice() {
+    result.dataset.result = resultPrice;
+    resultOutput = resultPrice.toLocaleString();
+    result.textContent = resultOutput + "₽";
+}
+
+
 
 getSize = () => {
     let getWidth = document.querySelector("#accountWidth");
@@ -147,34 +164,49 @@ getSize = () => {
 
 
 
-
-calculation = () => {
+calculationMaterial = () => {
     let itemCheck = calculaterForm.querySelectorAll('input[name=radio-item]:checked');
-    let addOrder = calculaterForm.querySelector('.add-order_container');
-    let result = document.querySelector(".order-result-price");
-    let priceResult = Number(result.dataset.result);
     let size = getSize();
     for (i = 0; i < itemCheck.length; i++) {
         let item = itemCheck[i];
         let itemPrice = Number(item.value);
-        priceResult = size * itemPrice;
-        priceResult = priceResult.toLocaleString();
+        resultPrice = size * itemPrice;
     }
 
+    updateTotalPrice();
 
+
+    let resultM = Number(result.dataset.result);
+    if (addItem1.checked) {
+       let addPrice =  calculateService(addItem1, size);
+       resultPrice = resultM + addPrice;
+       resultM += addPrice;
+    }
+    if (addItem2.checked) {
+        let addPrice2 =  Number(addItem2.value);
+        resultPrice = resultM + addPrice2; 
+        resultM += addPrice2;
+    }  
+    if (addItem3.checked) {
+        let addPrice3 =  calculateService(addItem3, size);
+        resultPrice = resultM + addPrice3; 
+        resultM += addPrice3;
+    } 
     
-    // getItemAdd();
-    
+     updateTotalPrice();
+}
 
-
-    result.textContent = priceResult + "₽";
-
+calculateService = (addItem, size) =>{
+    servicePrice = Number(addItem.value);
+    let priceItem = servicePrice * size;
+    return Number(priceItem);
 }
 
 calculaterForm.addEventListener('change', () => {
-    calculation();
+    calculationMaterial();
 })
 
 
-//вывод цены в итог
+
+
 
