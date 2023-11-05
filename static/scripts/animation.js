@@ -3,7 +3,7 @@
 $('.btn-smooth').on('click', () => {
     let heightS = $('.account_display-smooth').height();
     heightS += 30;
-    $('.account_display').css({ 'height': heightS },)
+    $('.account_display').css({ 'height': heightS }, 500)
 })
 
 
@@ -13,14 +13,14 @@ $('.btn-smooth').on('click', () => {
 $('.btn-textural').on('click', () => {
     let heightT = $('.account_display-texture').height();
     heightT += 30;
-    $('.account_display').css({ 'height': heightT }, 0)
+    $('.account_display').css({ 'height': heightT }, 500)
 })
 
 
 
 $('.btn-frescoes').on('click', () => {
     let heightF = $('.account_display-texture').height();
-    $('.account_display').css({ 'height': heightF }, 0)
+    $('.account_display').css({ 'height': heightF }, 500)
 })
 
 
