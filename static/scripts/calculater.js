@@ -140,9 +140,10 @@ let addItem1 = document.querySelector('input[name="add-item-1"]');
 let addItem2 = document.querySelector('input[name="add-item-2"]');
 let addItem3 = document.querySelector('input[name="add-item-3"]');
 let result = document.querySelector(".order-result-price");
+let buttonStepTwo = document.querySelector(".order-step-two");
 
 let resultPrice = 0;
-
+buttonStepTwo.classList.add("block");
 
 function updateTotalPrice() {
     result.dataset.result = resultPrice;
@@ -194,6 +195,14 @@ calculationMaterial = () => {
     } 
     
      updateTotalPrice();
+
+
+     if(resultM < 2000){
+        return;
+     }
+     else{
+        buttonStepTwo.classList.remove("block");
+     }
 }
 
 calculateService = (addItem, size) =>{

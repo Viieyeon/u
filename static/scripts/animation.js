@@ -1,9 +1,11 @@
 
+
 $('.btn-smooth').on('click', () => {
     let heightS = $('.account_display-smooth').height();
     heightS += 30;
     $('.account_display').css({ 'height': heightS },)
 })
+
 
 
 

@@ -424,7 +424,8 @@ h4 {
 .display_radio_btn input[type=radio],
 .account_radio_btn input[type=radio],
 .texture-item input[type=radio],
-.add-order_item input[type="checkbox"]{
+.add-order_item input[type="checkbox"],
+.add-order_item input[type="radio"]{
 	display: none;
 }
 
@@ -505,7 +506,8 @@ h4 {
 	padding: 15px 0;
 	width: 100%;
 	border-bottom: 1px solid #CFCFCF;
-	transition: all 1s ease-in;
+	overflow: hidden;
+	transition: all .5s ease-in;
 }
 
 .account_title {
@@ -569,13 +571,17 @@ h4 {
 }
 
 .add-order_item input[type="checkbox"]:checked,
-.add-order_item input[type="checkbox"]:not(:checked){
+.add-order_item input[type="checkbox"]:not(:checked),
+.add-order_item input[type="radio"]:checked,
+.add-order_item input[type="radio"]:not(:checked){
 	position: absolute;
 	left: -9999px;
 }
 
 .add-order_item input[type="checkbox"]:checked+label,
-.add-order_item input[type="checkbox"]:not(:checked)+label {
+.add-order_item input[type="checkbox"]:not(:checked)+label,
+.add-order_item input[type="radio"]:checked+label,
+.add-order_item input[type="radio"]:not(:checked)+label  {
 	display: inline-block;
 	position: relative;
 	padding-left: 28px;
@@ -584,7 +590,9 @@ h4 {
 }
 
 .add-order_item input[type="checkbox"]:checked+label:before,
-.add-order_item input[type="checkbox"]:not(:checked)+label:before {
+.add-order_item input[type="checkbox"]:not(:checked)+label:before,
+.add-order_item input[type="radio"]:checked+label:before,
+.add-order_item input[type="radio"]:not(:checked)+label:before  {
 	content: "";
 	position: absolute;
 	left: 0px;
@@ -596,12 +604,16 @@ h4 {
 }
 
 .add-order_item input[type="checkbox"]:checked+label:before,
-.add-order_item input[type="checkbox"]:not(:checked)+label:before {
+.add-order_item input[type="checkbox"]:not(:checked)+label:before,
+.add-order_item input[type="radio"]:checked+label:before,
+.add-order_item input[type="radio"]:not(:checked)+label:before {
 	border-radius: 100%;
 }
 
 .add-order_item input[type="checkbox"]:checked+label:after,
-.add-order_item input[type="checkbox"]:not(:checked)+label:after {
+.add-order_item input[type="checkbox"]:not(:checked)+label:after,
+.add-order_item input[type="radio"]:checked+label:after,
+.add-order_item input[type="radio"]:not(:checked)+label:after {
 	content: "";
 	position: absolute;
 	-webkit-transition: all 0.2s ease;
@@ -611,7 +623,9 @@ h4 {
 }
 
 .add-order_item input[type="checkbox"]:checked+label:after,
-.add-order_item input[type="checkbox"]:not(:checked)+label:after {
+.add-order_item input[type="checkbox"]:not(:checked)+label:after,
+.add-order_item input[type="radio"]:checked+label:after,
+.add-order_item input[type="radio"]:not(:checked)+label:after {
 	left: 3px;
 	top: 3px;
 	width: 14px;
@@ -620,11 +634,13 @@ h4 {
 	background-color: var(--main);
 }
 
-.add-order_item input[type="checkbox"]:not(:checked)+label:after {
+.add-order_item input[type="checkbox"]:not(:checked)+label:after,
+.add-order_item input[type="radio"]:not(:checked)+label:after {
 	opacity: 0;
 }
 
-.add-order_item input[type="checkbox"]:checked+label:after {
+.add-order_item input[type="checkbox"]:checked+label:after,
+.add-order_item input[type="radio"]:checked+label:after {
 	opacity: 1;
 }
 
@@ -893,7 +909,6 @@ h4 {
 .account_display {
 	min-height: 150px;
 	position: relative;
-	overflow: hidden;
 }
 
 .account_display-smooth,
@@ -951,6 +966,11 @@ h4 {
 
 .bestSwiper {
 	margin-top: -40px;
+}
+
+.block{
+	background-color: #e5ada6;
+	pointer-events: none;
 }
 
 @media (min-width: 1400px) {
