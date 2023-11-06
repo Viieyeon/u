@@ -17,6 +17,13 @@ function furnitureSelection() {
                     displayMain.classList.remove("display-one");
                     displayImg.src = '/static/media/png/Interior_01.png';
                 }
+                if(button.id === "hallFurniture"){
+                    displayTop.classList.remove("d-opasity");
+                    displayTop.classList.add("d-opasity-1");
+                    displayMain.classList.add("display-two");
+                    displayMain.classList.remove("display-one");
+                    displayImg.src = '/static/media/png/Interior_02.png';
+                }
                 if (button.id === "noFurniture") {
                     displayTop.classList.add("d-opasity");
                     displayTop.classList.remove("d-opasity-1");

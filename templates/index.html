@@ -259,7 +259,12 @@
                   <div class="display-img">
                     <img src="/static/media/svg/img.svg" alt="img">
                   </div>
-                  <p class="display-text">Формат загружаемого файла: jpeg, gif или png, максимальный размер — 15 Mb</p>
+                  <p class="display-text">
+                    Формат загружаемого файла: jpeg, gif или png, максимальный размер — 15 Mb
+                      <a href="#" class="file-link display-file">
+                        Тех характеристики файла для печати
+                      </a>
+                  </p>
                   <div class="button-file d-flex flex-column">
                     <input type="file" name="file" id="photo">
                     <button class="btn display-btn">Загрузить фото</button>
@@ -294,7 +299,7 @@
             <form class="account_calculator-form ">
               <div class="account_calculater-info">
                 <div class="account_item-one">
-                  <h4>Размер стены:</h4>
+                  <h4 class="medium">Размер стены:</h4>
                   <div class="account_wh d-flex">
                     <div class="account_width">
                       <label for="accountWidth">Ширина, см</label>
@@ -304,10 +309,15 @@
                       <label for="accountHeight">Высота, см</label>
                       <input type="number" class="input-wh" value="100" id="accountHeight">
                     </div>
+                    <div class="specifications_file">
+                      <a href="#" class="file-link">
+                        Тех характеристики файла для печати
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <div class="account_item-two">
-                  <h4 class="account_title">Материалы для обоев:</h4>
+                  <h4 class="account_title medium">Материалы для обоев:</h4>
                   <div class="account_texture">
                     <div class="account_radio_btn btn-textural">
                       <input id="textural" type="radio" name="radioTex" value="textural" class="radio_account" checked>
@@ -448,7 +458,7 @@
                   </div>
                 </div>
                 <div class="account_item-three">
-                  <h4 class="add-order_title">Добавить к заказу:</h4>
+                  <h4 class="add-order_title medium">Добавить к заказу:</h4>
                   <div class="add-order_container">
                     <div class="add-order_item add-order_checkbox">
                       <input id="addItemOne" type="checkbox" name="add-item-1" value="200"
@@ -480,12 +490,17 @@
                         </div>
                       </label>
                     </div>
+                    <div class="rules_file">
+                      <a href="#" class="file-link">
+                        Правила монтажа обоев
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <div class="order-result">
                   <div class="order-result-info">
-                    <h4 class="order-result_title">Текущая стоимость заказа</h4>
-                    <p class="order-result-price" data-result="">
+                    <h4 class="order-result_title medium">Текущая стоимость заказа</h4>
+                    <p class="order-result-price medium" data-result="">
                       215₽
                     </p>
                     <span>Минимальная стоимость заказа 2000 руб.</span>
