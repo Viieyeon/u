@@ -153,6 +153,8 @@ function updateTotalPrice() {
 
 
 
+
+
 getSize = () => {
     let getWidth = document.querySelector("#accountWidth");
     let getHeight = document.querySelector("#accountHeight");
@@ -179,33 +181,34 @@ calculationMaterial = () => {
 
     let resultM = Number(result.dataset.result);
     if (addItem1.checked) {
-       let addPrice =  calculateService(addItem1, size);
-       resultPrice = resultM + addPrice;
-       resultM += addPrice;
+        let addPrice = calculateService(addItem1, size);
+        resultPrice = resultM + addPrice;
+        resultM += addPrice;
     }
+
     if (addItem2.checked) {
-        let addPrice2 =  Number(addItem2.value);
-        resultPrice = resultM + addPrice2; 
+        let addPrice2 = Number(addItem2.value);
+        resultPrice = resultM + addPrice2;
         resultM += addPrice2;
-    }  
+    }
     if (addItem3.checked) {
-        let addPrice3 =  calculateService(addItem3, size);
-        resultPrice = resultM + addPrice3; 
+        let addPrice3 = calculateService(addItem3, size);
+        resultPrice = resultM + addPrice3;
         resultM += addPrice3;
-    } 
-    
-     updateTotalPrice();
+    }
+
+    updateTotalPrice();
 
 
-     if(resultM < 2000){
+    if (resultM < 2000) {
         return;
-     }
-     else{
+    }
+    else {
         buttonStepTwo.classList.remove("block");
-     }
+    }
 }
 
-calculateService = (addItem, size) =>{
+calculateService = (addItem, size) => {
     servicePrice = Number(addItem.value);
     let priceItem = servicePrice * size;
     return Number(priceItem);
@@ -216,6 +219,16 @@ calculaterForm.addEventListener('change', () => {
 })
 
 
-
-
+getCheck = () => {
+    let itemCheck = calculaterForm.querySelectorAll('input[name=radio-item]:checked');
+    for (i = 0; i < itemCheck.length; i++) {
+        for (i = 0; i < itemCheck.length; i++) {
+            let item = itemCheck[i];
+            let itemPrice = Number(item.value);
+            resultPrice = size * itemPrice;
+        }
+    
+        updateTotalPrice();
+    }
+}
 
